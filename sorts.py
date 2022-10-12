@@ -35,9 +35,10 @@ class Sorts:
         mid = (lowerBound + upperBound) // 2
         
         if lowerBound < upperBound:
-            left = self.mergesort(unsorted=unsorted[lowerBound:mid])
-            right = self.mergesort(unsorted=unsorted[mid+1:upperBound])
-            return self.__merge(left=left, right=right)
+            left = self.mergesort(unsorted=unsorted[lowerBound:mid]) #lgn 
+            right = self.mergesort(unsorted=unsorted[mid+1:upperBound]) # lgn 
+            # 2lgn
+            return self.__merge(left=left, right=right) #n 
         
         return unsorted
 
@@ -78,3 +79,13 @@ s = Sorts()
 y = Sorts()
 s.quicksort(x)
 print("SORTED LIST, ",x)
+
+
+print ([str (i+ 3) for i in x])
+
+
+
+
+# 52 *  52 * 52
+# 
+# x^ n  
